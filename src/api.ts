@@ -8,8 +8,8 @@ function wait(delay: number) {
   return new Promise((resolve) => setTimeout(resolve, delay));
 }
 
-export function get<T>(): Promise<T> {
+export function get<T>(url: string = BASE_URL): Promise<T> {
   return wait(500)
-    .then(() => fetch(BASE_URL))
+    .then(() => fetch(url))
     .then((response) => response.json());
 }

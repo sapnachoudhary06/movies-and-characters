@@ -1,7 +1,7 @@
 export interface Film {
   title: string,
   characters: string[],
-  release_date: number,
+  release_date: string,
 }
 
 export interface ApiResourceList {
@@ -9,4 +9,8 @@ export interface ApiResourceList {
   next: string,
   previous: string,
   results: Film[],
+}
+
+export interface Character {
+  name: string,
 }
