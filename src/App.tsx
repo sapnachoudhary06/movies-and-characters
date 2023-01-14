@@ -40,6 +40,9 @@ export const App = () => {
         <Loader />
       )}
 
+      {isLoading && !selectedFilm && (
+        <h2>Loading</h2>
+      )}
       {!selectedFilm && (
         <FilmsList
         films={sortedFilms}

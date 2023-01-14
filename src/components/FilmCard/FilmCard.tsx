@@ -9,11 +9,13 @@ interface Props {
 }
 
 export const FilmCard: React.FC<Props> = ({ film, deselectFilm }) => {
+  const [isError, setIsError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [characters, setCharacters] = useState<Character[]>([]);
 
   const fetchCharacters = useCallback(async () => {
     setIsLoading(true);
+    setIsError(false);
     try {
       //do something
       const fetchedCharacters = film.characters.map(async (characterUrl) => {
@@ -27,7 +29,7 @@ export const FilmCard: React.FC<Props> = ({ film, deselectFilm }) => {
           setCharacters(values);
         });
     } catch(error) {
-      //do something
+      setIsError(true);
     }
     setIsLoading(false);
   }, []);
@@ -54,6 +56,17 @@ export const FilmCard: React.FC<Props> = ({ film, deselectFilm }) => {
           ))}
         </ul>
       )}
+
+      {characters.length === 0 && !isLoading && !isError && (
+        <h2>There are no characters</h2>
+      )}
+
+      {isError && (
+        <h2 className="notification is-danger">
+          Something went wrong, Please, Try again
+        </h2>
+      )}
+
       <button
         onClick={() => deselectFilm(null)}
         >
