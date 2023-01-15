@@ -13,6 +13,7 @@ export const FilmsList: React.FC<Props> = ({ films, onSelectFilm }) => {
       {films.map((film, idx) => (
         <li key={idx}>
           <a
+            className="title is-5 films__link"
             onClick={() => onSelectFilm(film)}
           >
             {film.title}

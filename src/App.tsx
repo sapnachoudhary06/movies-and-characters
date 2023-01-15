@@ -5,6 +5,7 @@ import { FilmsList } from "./components/FilmsList";
 import { Loader } from "./components/Loader";
 import { ApiResourceList, Film } from "./types/Film";
 import { convertDateToYear } from "./utils";
+import './App.scss';
 
 export const App = () => {
   const [films, setFilms] = useState<Film[]>([]);
@@ -35,27 +36,51 @@ export const App = () => {
   }, [films]);
 
   return (
-    <>
-      {isLoading && (
-        <Loader />
-      )}
+    <div className="box">
+      <a
+        href="#"
+        className="logo"
+        onClick={() => setSelectedFilm(null)}
+      >
+        <div className="image is-128x128">
+          <div className="logo__image" />
+        </div>
+      </a>
 
-      {isLoading && !selectedFilm && (
-        <h2>Loading</h2>
-      )}
-      {!selectedFilm && (
-        <FilmsList
-        films={sortedFilms}
-        onSelectFilm={setSelectedFilm}
-      />
-      )}
+      {selectedFilm
+        ? (
+          <FilmCard
+            film={selectedFilm}
+            deselectFilm={setSelectedFilm}
+          />
+        )
+        : (
+          <div className="block">
+            {isLoading && (
+              <Loader />
+            )}
 
-      {selectedFilm && (
-        <FilmCard
-          film={selectedFilm}
-          deselectFilm={setSelectedFilm}
-        />
-      )}
-    </>
+            {isError && (
+              <p className="notification is-danger">
+                Something went wrong.
+              </p>
+            )}
+
+            {(sortedFilms.length === 0) && !isError && !isLoading && (
+              <p>
+                There are no films on the server.
+              </p>
+            )}
+
+            {(sortedFilms.length > 0) && !isLoading && (
+              <FilmsList
+                films={sortedFilms}
+                onSelectFilm={setSelectedFilm}
+              />
+            )}
+          </div>
+        )
+      }
+    </div>
   );
 };

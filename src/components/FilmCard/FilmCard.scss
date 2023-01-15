@@ -1,2 +1,14 @@
+.characters {
+  list-style-type: square;
+  padding-left: 40px;
+  color: white;
 
+  &__item {
+    padding-bottom: 10px;
+  }
+}
+
+.button {
+  cursor: pointer;
+}
 

@@ -3,6 +3,8 @@ import { get } from "../../api";
 import { Character, Film } from "../../types/Film";
 import { convertDateToYear } from "../../utils";
 import { Loader } from "../Loader";
+import './FilmCard.scss';
+
 interface Props {
   film: Film,
   deselectFilm: (value: null) => void,
@@ -41,7 +43,7 @@ export const FilmCard: React.FC<Props> = ({ film, deselectFilm }) => {
 
   return (
     <div>
-      <h1>
+      <h1 className="title is-4">
         {`${film.title} (${convertDateToYear(film.release_date)})`}
       </h1>
 
@@ -49,10 +51,16 @@ export const FilmCard: React.FC<Props> = ({ film, deselectFilm }) => {
         <Loader />
       )}
 
+
       {characters.length > 0 && !isLoading && (
-        <ul>
-          {characters.map((character) => (
-            <li>{character.name}</li>
+        <ul className="characters">
+          {characters.map((character, idx) => (
+            <li
+              key={idx}
+              className={"characters__item"}
+            >
+              <p className="title is-6">{character.name}</p>
+            </li>
           ))}
         </ul>
       )}
@@ -62,16 +70,20 @@ export const FilmCard: React.FC<Props> = ({ film, deselectFilm }) => {
       )}
 
       {isError && (
-        <h2 className="notification is-danger">
+        <h2 className="notification is-primary is-light">
           Something went wrong, Please, Try again
         </h2>
       )}
 
-      <button
-        onClick={() => deselectFilm(null)}
-        >
-        Go Back
-      </button>
+        <nav className="pagination is-centered tile">
+          <button
+            className="pagination-previous button"
+            disabled={isLoading}
+            onClick={() => deselectFilm(null)}
+          >
+            Back
+          </button>
+        </nav>
     </div>
   );
 };
