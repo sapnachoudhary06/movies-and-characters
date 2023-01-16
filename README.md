@@ -1,10 +1,11 @@
 # Movies
 
-Implement the `App` with ability to display a scrollable list of movies fetched through [API](https://swapi.dev/documentation#films). Clicking a movie from this list shows a detailed view of movie containing name and its characters.
+Implement the `App` with a home page having ability to display a scrollable list of film fetched through [API](https://swapi.dev/documentation#films) sorted by it's released year. Clicking on a film name from this list takes to the film page with ability to show a detailed view about the film containing name, release year and its characters.
+The star wars logo is present all the time in both the view/page and is a link which can be clicked to be redirected to the home page (page displaying a list of films). Additionally there is a back button on the film page (page to display film details) which is enabled after the API fetch is complete and clicking on it takes us back to the home page.
+The application is responsive to different screen sizes and adapts displaying the film names in grid.
 
 ## Demo
-
-
+https://sapnachoudhary06.github.io/movies-and-characters/
 
 ## Run Locally
 
@@ -41,9 +42,13 @@ To deploy this project run
 ```
 
 ## 🛠 Skills
+Javascript, TypeScript, HTML, SCSS, Bulma, React and hooks.
 
 
 ## Assumptions/Limitations
+1. The release date of the film in the field `release_date` is a string in the format `YYYY-MM-DD`.
+2. The API server is taking too long for responding, we get frequent errors in fetching films list and characters for the film.
+3. The working/live version of the application is deployed on [Github](https://sapnachoudhary06.github.io/movies-and-characters/), deployment on Netlify was not working.
 
 
 ## Original Problem Statement
