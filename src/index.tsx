@@ -3,8 +3,9 @@ import React from 'react';
 
 import 'bulma/css/bulma.css';
 import '@fortawesome/fontawesome-free/css/all.css';
+import { App } from './App';
 
 createRoot(document.getElementById('root') as HTMLDivElement)
   .render(
-    <h1>Hello movie lovers!!</h1>,
+    <App />,
   );

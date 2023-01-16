@@ -1,0 +1,17 @@
+.films {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  list-style-type: square;
+  padding-left: 20px;
+  color: white;
+
+  &__link:hover {
+    color: yellow;
+  }
+}
+
+.title {
+  color: white;
+}
+
