@@ -43,7 +43,7 @@ export const FilmCard: React.FC<Props> = ({ film, deselectFilm }) => {
 
   return (
     <div>
-      <h1 className="title is-4">
+      <h1 className="title is-3 has-text-info-dark">
         {`${film.title} (${convertDateToYear(film.release_date)})`}
       </h1>
 
@@ -59,7 +59,10 @@ export const FilmCard: React.FC<Props> = ({ film, deselectFilm }) => {
               key={idx}
               className={"characters__item"}
             >
-              <p className="title is-6">{character.name}</p>
+              <p className="title is-5 has-text-success-light"
+              >
+                {character.name}
+              </p>
             </li>
           ))}
         </ul>
