@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/movies-and-characters/static/css/main.836edc66.css",
+    "main.js": "/movies-and-characters/static/js/main.21d76df0.js",
+    "static/media/fa-solid-900.ttf": "/movies-and-characters/static/media/fa-solid-900.b1a653db79258eeccc5d.ttf",
+    "static/media/fa-brands-400.ttf": "/movies-and-characters/static/media/fa-brands-400.450a5c898f0b184b968b.ttf",
+    "static/media/fa-solid-900.woff2": "/movies-and-characters/static/media/fa-solid-900.41c0f706d8ce93933771.woff2",
+    "static/media/fa-brands-400.woff2": "/movies-and-characters/static/media/fa-brands-400.3ac6859b28be946745f9.woff2",
+    "static/media/stars_background.jpg": "/movies-and-characters/static/media/stars_background.bd735b3935cf16ca07a0.jpg",
+    "static/media/star_wars_logo.png": "/movies-and-characters/static/media/star_wars_logo.95d351a0461231e015c0.png",
+    "static/media/fa-regular-400.ttf": "/movies-and-characters/static/media/fa-regular-400.3cd9fb8fcec4ad0f99d4.ttf",
+    "static/media/fa-regular-400.woff2": "/movies-and-characters/static/media/fa-regular-400.1f3772178d9e5bed38a6.woff2",
+    "static/media/fa-v4compatibility.ttf": "/movies-and-characters/static/media/fa-v4compatibility.e314b618134d5be20996.ttf",
+    "static/media/fa-v4compatibility.woff2": "/movies-and-characters/static/media/fa-v4compatibility.4ee7f902d88f819e251c.woff2",
+    "index.html": "/movies-and-characters/index.html",
+    "main.836edc66.css.map": "/movies-and-characters/static/css/main.836edc66.css.map",
+    "main.21d76df0.js.map": "/movies-and-characters/static/js/main.21d76df0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.836edc66.css",
+    "static/js/main.21d76df0.js"
+  ]
+}
