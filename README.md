@@ -1,6 +1,6 @@
 # Movies
 
-Implement the `App` with a home page having ability to display a scrollable list of film fetched through [API](https://swapi.dev/documentation#films) sorted by it's released year. Clicking on a film name from this list takes to the film page with ability to show a detailed view about the film containing name, release year and its characters.
+Implemented the `App` with a home page having ability to display a scrollable list of film fetched through [API](https://swapi.dev/documentation#films) sorted by it's released year. Clicking on a film name from this list takes to the film page with ability to show a detailed view about the film containing name, release year and its characters.
 The star wars logo is present all the time in both the view/page and is a link which can be clicked to be redirected to the home page (page displaying a list of films). Additionally there is a back button on the film page (page to display film details) which is enabled after the API fetch is complete and clicking on it takes us back to the home page.
 The application is responsive to different screen sizes and adapts displaying the film names in grid.
 
